@@ -13,86 +13,26 @@
     />
     <link rel="stylesheet" href="styles.css" />
     <title>Frontend Mentor | Mortgage repayment calculator</title>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <!-- <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style> -->
   </head>
   <body>
-    <div class="main">
-      <div class="half1">
-        <div class="mortgagecalculatorcle">
-          <p>Mortgage Calculator</p>
-          <button>Clear All</button>
+    <div class="mortage-calculator">
+      <div class="left">
+        <div class="header">
+          <h2>Mortgage Calculator</h2>
+          <button id="clear-btn">Clear All</button>
         </div>
-        <div class="mortgageamount">
-          <label for="Mortgageamount">Mortgage Amount</label>
-          <input type="text" id="Mortgageamount" />
-        </div>
-        <div class="mortageTerm">
-          <div class="mortageTerm_1">
-            <label for="mortageTerm">Mortgage Term</label>
-            <input type="year" id="mortageTerm" />
-          </div>
+        <form action="" id="mortagage-form">
+  <div class="form-item">
+  <label class="form-item" for="mortagage-amount">Mortagage Amount</label>
+  <div class="form-flex" id="mortagage-amount-main">
+    <p class="form-sumbol">$</p>
+    <input type="number" id="mortagage-amount" name="mortagage-amount" required>
+  </div>
 
-          <div class="mortageTerm_2">
-            <label for="interestRate">Interest Rate</label>
-            <input type="text" id="interestRate" />
-          </div>
-        </div>
-        <div class="mortgageType">
-          <label for="">Mortgage Type</label>
-          <div class="repayment">
-            <div class="repayment_1">
-              <input type="radio" id="repayment" />
-              <label for="repayment">Repayment </label>
-            </div>
-            <div class="repayment_1">
-              <input type="radio" id="interestOnly" />
-              <label for="interestOnly">Interest Only</label>
-            </div>
-          </div>
-        </div>
+  <p class="form-alert" id="amount-alert">field is required</p>
+</div>
+        </form>
+       
 
-        <button>Calculate Repayments</button>
-
-        <!-- Empty results start -->
-      </div>
-      <div class="half2">
-        <!-- Results shown here Complete the form and click “calculate repayments” to
-        see what your monthly repayments would be. -->
-        <!-- Empty results end -->
-        <!-- Completed results start -->
-
-        <h2>Your results</h2>
-        <p>
-          Your results are shown below based on the information you provided. To
-          adjust the results, edit the form and click “calculate repayments”
-          again.
-        </p>
-        <div class="half2-1">
-          <p>Your monthly repayments</p>
-          <P id="price"></P>
-          <p>Total you'll repay over the term</p>
-          <p id="totalrepay"></p>
-        </div>
-        <!-- Completed results end -->
-      </div>
-    </div>
-
-    <!-- Empty results end -->
-
-    <!-- <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
-      Coded by <a href="#">Your Name Here</a>.
-    </div> -->
   </body>
 </html>
