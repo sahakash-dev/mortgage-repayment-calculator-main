@@ -11,6 +11,10 @@
       sizes="32x32"
       href="./assets/images/favicon-32x32.png"
     />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
     <link rel="stylesheet" href="styles.css" />
     <title>Frontend Mentor | Mortgage repayment calculator</title>
   </head>
@@ -21,18 +25,130 @@
           <h2>Mortgage Calculator</h2>
           <button id="clear-btn">Clear All</button>
         </div>
-        <form action="" id="mortagage-form">
-  <div class="form-item">
-  <label class="form-item" for="mortagage-amount">Mortagage Amount</label>
-  <div class="form-flex" id="mortagage-amount-main">
-    <p class="form-sumbol">$</p>
-    <input type="number" id="mortagage-amount" name="mortagage-amount" required>
-  </div>
 
-  <p class="form-alert" id="amount-alert">field is required</p>
-</div>
+        <form id="mortagage-form">
+          <div class="form-item">
+            <label class="light-text" for="mortagage-amount"
+              >Mortagage Amount</label
+            >
+            <div class="form-flex" id="mortagage-amount-main">
+              <p class="form-sumbol">$</p>
+              <input
+                type="number"
+                id="mortagage-amount"
+                name="mortagage-amount"
+                required
+              />
+            </div>
+
+            <p class="form-alert" id="amount-alert">field is required</p>
+          </div>
+
+          <div class="form-item">
+            <div class="form-col">
+              <div class="form-item">
+                <label for="mortagage-term" class="light-text"
+                  >Mortagage Term</label
+                >
+                <div class="form-flex" id="mortagage-term-main">
+                  <input
+                    type="number"
+                    name="mortagage-term"
+                    id="mortagage-term"
+                    required
+                  />
+                  <p class="form-symbol">years</p>
+                </div>
+                <p class="form-alert" id="term-alert">This field is required</p>
+              </div>
+              <div class="from-item">
+                <label class="light-text" for="interest-rate"
+                  >Interest Rate</label
+                >
+                <div class="form-flex" id="interest-rate-main">
+                  <input
+                    type="number"
+                    name="interest-rate"
+                    id="interest-rate"
+                    step="0.01"
+                    required
+                  />
+                  <p class="form-symbol">%</p>
+                </div>
+
+                <p class="form-alert" id="rate-alert">This field is required</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-item">
+            <label class="light-text">Mortagae Type</label>
+            <div class="radio-inputs">
+              <input
+                type="radio"
+                id="repayment"
+                class="mortagage-type"
+                name="mortagage-type"
+                value="repayment"
+                required
+              />
+              <label for="repayment">Repayment</label>
+            </div>
+
+            <div class="radio-inputs">
+              <input
+                type="radio"
+                name="mortagage-type"
+                id="interest-only"
+                class="mortagage"
+                value="interest-only"
+                required
+              />
+              <label for="interest-only">interest-only</label>
+            </div>
+            <p class="form-alert" id="type-alert">This field is required</p>
+          </div>
+          <div class="form-item">
+            <button type="button" class="calculate-btn" id="calculate-btn">
+              <span class="material-symbols-outlined"> calculate </span>
+              Calculate Repayments
+            </button>
+          </div>
         </form>
-       
+      </div>
+      <div class="right">
+        <div id="default-text" class="default-text">
+          <img src="./assets/images/illustration-empty.svg" alt="svg image" />
+          <h2>Results shown here</h2>
+          <p class="light-text">
+            Complete the form and click "calculate repayment" to see what your
+            monthly repayments would be.
+          </p>
+        </div>
+        <div class="calculations-container" id="calculations-container">
+          <h2>Your results</h2>
+          <p class="light-text">
+            Your results are shown below based on the information you provided.
+            To adjust the results, edit the form and click "calculate
+            repauments: again.
+          </p>
 
+          <div class="calculations">
+            <div class="monthly">
+              <p class="light-text">Your monthly repayments</p>
+              <span class="monthly-result" id="result"></span>
+            </div>
+
+            <div class="line"></div>
+
+            <div class="total-term">
+              <p class="light-text">Total you'll over the term</p>
+              <span class="monthly-result" id="result"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
   </body>
 </html>
